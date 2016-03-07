@@ -99,7 +99,7 @@ function hex_linedraw(a, b)
 
 function hex_ring(center, radius) {
     var results = [];
-    var hex = hex_add(center, hex_scale(hex_direction[0], radius));
+    var hex = hex_add(center, hex_scale(hex_direction(0), radius));
     for(var i = 0 ; i < 6 ; i++)
         for(var j = 0 ; j < radius ; j++) {
             results.push(hex);
