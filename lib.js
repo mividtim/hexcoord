@@ -97,6 +97,16 @@ function hex_linedraw(a, b)
     return results;
 }
 
+function hex_ring(center, radius) {
+    var results = [];
+    var hex = hex_add(center, hex_scale(hex_direction[0], radius));
+    for(var i = 0 ; i < 6 ; i++)
+        for(var j = 0 ; j < radius ; j++) {
+            results.push(hex);
+            hex = hex_neighbor(hex, i);
+        }
+    return results;
+}
 
 
 
@@ -192,7 +202,6 @@ function polygon_corners(layout, h)
     }
     return corners;
 }
-
 
 
 
@@ -350,6 +359,7 @@ exports.hex_distance = hex_distance;
 exports.hex_round = hex_round;
 exports.hex_lerp = hex_lerp;
 exports.hex_linedraw = hex_linedraw;
+exports.hex_ring = hex_ring;
 
 exports.OffsetCoord = OffsetCoord;
 exports.EVEN = EVEN;
@@ -368,4 +378,3 @@ exports.hex_to_pixel = hex_to_pixel;
 exports.pixel_to_hex = pixel_to_hex;
 exports.hex_corner_offset = hex_corner_offset;
 exports.polygon_corners = polygon_corners;
-
