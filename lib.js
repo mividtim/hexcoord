@@ -203,6 +203,15 @@ function polygon_corners(layout, h)
     return corners;
 }
 
+function indexOfHex(hexes, hex) {
+  return hexes.reduce(function(cur, val, index) {
+    if cur is -1 and val.q is hex.q and val.r is hex.r then index else cur
+  }, -1);
+}
+
+function neighbors(hex1, hex2) {
+  return indexOfHex(hex_ring(hex1, 1), hex2) > -1);
+}
 
 
 // Tests
@@ -378,3 +387,6 @@ exports.hex_to_pixel = hex_to_pixel;
 exports.pixel_to_hex = pixel_to_hex;
 exports.hex_corner_offset = hex_corner_offset;
 exports.polygon_corners = polygon_corners;
+
+exports.indexOfHex = indexOfHex
+exports.neighbors = neighbors
