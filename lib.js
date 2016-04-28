@@ -205,12 +205,12 @@ function polygon_corners(layout, h)
 
 function indexOfHex(hexes, hex) {
   return hexes.reduce(function(cur, val, index) {
-    if cur is -1 and val.q is hex.q and val.r is hex.r then index else cur
+    return cur === -1 && val.q === hex.q && val.r === hex.r && val.s === hex.s ? index : cur;
   }, -1);
 }
 
 function neighbors(hex1, hex2) {
-  return indexOfHex(hex_ring(hex1, 1), hex2) > -1);
+  return indexOfHex(hex_ring(hex1, 1), hex2) > -1;
 }
 
 
