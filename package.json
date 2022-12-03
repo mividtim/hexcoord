@@ -2,12 +2,16 @@
   "author": "Red Blob Games <redblobgames@gmail.com>",
   "name": "hexcoord",
   "description": "",
+  "type": "module",
   "version": "0.1.10",
   "license": "MIT",
   "homepage": "http://www.redblobgames.com/grids/hexagons/",
   "repository": {
     "type": "git",
     "url": "git@github.com:mividtim/hexcoord.git"
+  },
+  "engines": {
+    "node": ">=12.17"
   },
   "main": "lib.js"
 }

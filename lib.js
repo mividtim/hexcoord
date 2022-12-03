@@ -1,6 +1,5 @@
-// Generated code -- http://www.redblobgames.com/grids/hexagons/
-"use strict";
-
+// This code was originally generated at http://www.redblobgames.com/grids/hexagons/
+// It has been modified from the original to be pure ES module
 
 
 function Point(x, y) {
@@ -348,45 +347,13 @@ function test_all()
 
 
 
-test_all()
+test_all();
 
-// Exports for node/browserify modules:
 
-exports.Point = Point;
-
-exports.Hex = Hex;
-exports.hex_add = hex_add;
-exports.hex_subtract = hex_subtract;
-exports.hex_scale = hex_scale;
-exports.hex_directions = hex_directions;
-exports.hex_direction = hex_direction;
-exports.hex_neighbor = hex_neighbor;
-exports.hex_diagonals = hex_diagonals;
-exports.hex_diagonal_neighbor = hex_diagonal_neighbor;
-exports.hex_length = hex_length;
-exports.hex_distance = hex_distance;
-exports.hex_round = hex_round;
-exports.hex_lerp = hex_lerp;
-exports.hex_linedraw = hex_linedraw;
-exports.hex_ring = hex_ring;
-
-exports.OffsetCoord = OffsetCoord;
-exports.EVEN = EVEN;
-exports.ODD = ODD;
-exports.qoffset_from_cube = qoffset_from_cube;
-exports.qoffset_to_cube = qoffset_to_cube;
-exports.roffset_from_cube = roffset_from_cube;
-exports.roffset_to_cube = roffset_to_cube;
-
-exports.Orientation = Orientation;
-
-exports.Layout = Layout;
-exports.layout_pointy = layout_pointy;
-exports.layout_flat = layout_flat;
-exports.hex_to_pixel = hex_to_pixel;
-exports.pixel_to_hex = pixel_to_hex;
-exports.hex_corner_offset = hex_corner_offset;
-exports.polygon_corners = polygon_corners;
-
-exports.index_of_hex = index_of_hex
-exports.neighbors = neighbors
+export default {
+    Point, Hex, hex_add, hex_subtract, hex_scale, hex_directions, hex_direction, hex_neighbor, hex_diagonals,
+    hex_diagonal_neighbor, hex_length, hex_distance, hex_round, hex_lerp, hex_linedraw, hex_ring, OffsetCoord,
+    EVEN, ODD, qoffset_from_cube, qoffset_to_cube, roffset_from_cube, roffset_to_cube, Orientation, Layout,
+    layout_pointy, layout_flat, hex_to_pixel, pixel_to_hex, hex_corner_offset, polygon_corners, index_of_hex,
+    neighbors
+};
